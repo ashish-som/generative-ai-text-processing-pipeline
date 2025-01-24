@@ -27,6 +27,7 @@ Follow the steps below to set up and run the pipeline.
 ### Installation
 
 1. Clone the repository:
+   ```bash
    git clone https://github.com/ashish-som/generative-ai-text-processing-pipeline.git
    cd generative-ai-text-processing-pipeline
 
@@ -34,3 +35,7 @@ Follow the steps below to set up and run the pipeline.
    python -m venv env
    source env/bin/activate  # For Linux/Mac
    .\env\Scripts\activate   # For Windows
+
+3. Install required dependencies:
+pip install -r requirements.txt
+   
