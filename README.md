@@ -8,7 +8,7 @@ A Python-based pipeline for preprocessing text, generating LLM prompts, and pars
 - **Config Manager**: Centralized configuration for easier customization and scalability.
 - **Data Loader**: Load data from PDFs or Excel files into a Pandas DataFrame for processing.
 - **Prompt Builder**: Generate structured and optimized prompts for LLMs.
-- **API Caller**: Make API calls to LLMs and handle responses.
+- **LLM Model**: Make API calls to LLMs and handle responses.
 - **Validator**: Validate JSON format of API responses to ensure data integrity.
 - **Data Saver**: Save processed results to CSV and text files.
   
