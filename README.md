@@ -32,10 +32,12 @@ Follow the steps below to set up and run the pipeline.
    cd generative-ai-text-processing-pipeline
 
 2. Create and activate a virtual environment:
+    ```bash
    python -m venv env
    source env/bin/activate  # For Linux/Mac
    .\env\Scripts\activate   # For Windows
 
-3. Install required dependencies:
-pip install -r requirements.txt
+4. Install required dependencies:
+    ```bash
+    pip install -r requirements.txt
    
