@@ -8,12 +8,13 @@ Classes:
 """
 
 from abc import ABC, abstractmethod
-from typing import Any
+from typing import Any, Dict
 
 
 class ConfigInterface(ABC):
     """
-    Abstract base class for configuration loaders.
+    Abstract base class for configuration loaders, tailored to handle the specific fields
+    defined in the 'config.yaml' file for the LLM-based project.
     """
 
     @abstractmethod
@@ -60,5 +61,55 @@ class ConfigInterface(ABC):
 
         Returns:
             Any: The configuration value.
+        """
+        pass
+
+    @abstractmethod
+    def get_input_paths(self) -> Dict[str, str]:
+        """
+        Fetches paths related to input files (e.g., Excel, PDF).
+
+        Returns:
+            dict: Dictionary containing 'excel_path', 'pdf_path', and other relevant input paths.
+        """
+        pass
+
+    @abstractmethod
+    def get_output_path(self) -> str:
+        """
+        Fetches the output directory path.
+
+        Returns:
+            str: The path to the output directory.
+        """
+        pass
+
+    @abstractmethod
+    def get_model_config(self) -> Dict[str, Any]:
+        """
+        Fetches the model configuration details such as model name and temperature.
+
+        Returns:
+            dict: Dictionary containing model configuration (e.g., 'model_name', 'temperature').
+        """
+        pass
+
+    @abstractmethod
+    def get_project_name(self) -> str:
+        """
+        Fetches the project name.
+
+        Returns:
+            str: The project name.
+        """
+        pass
+
+    @abstractmethod
+    def extract_from_pdf(self) -> bool:
+        """
+        Determines whether text should be extracted from PDFs.
+
+        Returns:
+            bool: True if extraction from PDFs is enabled, False otherwise.
         """
         pass

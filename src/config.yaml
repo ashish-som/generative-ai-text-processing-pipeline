@@ -1,0 +1,27 @@
+# Configuration file for the LLM-based project
+
+project_name: "Test Project"
+
+# Environment variables for API key
+project_key_name: "LLM_PROJECT_API_KEY"          # The name of the environment variable for the API key
+
+# Model configuration
+model_config:
+  model_name: 'o1-mini-2024-09-12'               # OpenAI model name (e.g., gpt-4, o1-mini, etc.)
+  temperature: 0.5                               # Temperature setting for LLM requests (randomness control)
+
+# Paths to input files
+input_paths:
+  data_excel_path: "/path/to/excel/file.xlsx"    # Path to the Excel file containing data
+  data_sheet_name: 'sheet_name'                   # Sheet name for the data in the Excel file
+  
+  pdf_path: "/path/to/pdf/files"                 # Directory path containing PDF files for extraction
+  
+  prompt_file_path: "/path/to/prompt/sheet.xlsx" # Path to the sheet containing prompt structure
+  prompt_sheet_name: "sheet_name"                # Sheet name for the prompt structure sheet
+
+# Paths to output files
+output_path: "/path/to/output/directory"         # Directory where output will be saved
+
+# Flag to determine if text should be extracted from PDFs
+extract_from_pdf: true                           # Set to True/False based on whether PDF extraction is needed
