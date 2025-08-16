@@ -20,12 +20,15 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: Install dependencies
+    - name: Upgrade pip and install core dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        pip install pytest pytest-cov
       working-directory: .
+
+    - name: Install pytest and coverage tools
+      run: |
+        pip install pytest pytest-cov
 
     - name: Run tests with coverage
       run: |
