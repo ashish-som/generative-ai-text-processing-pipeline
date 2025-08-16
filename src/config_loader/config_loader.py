@@ -5,6 +5,17 @@ import os
 from typing import Any, Dict
 from interfaces.config_interface import ConfigInterface
 
+"""
+Module: config_loader.py
+
+Purpose: Implements a configuration loader class that adheres to the ConfigInterface.
+         It is responsible for reading and parsing a YAML configuration file,
+         providing methods to access configuration values safely and in a structured manner.
+
+Classes:
+    ConfigLoader: A concrete implementation of the ConfigInterface for YAML files.
+"""
+
 class ConfigLoader(ConfigInterface):
     """
     A class to load and manage configuration from a YAML file.
