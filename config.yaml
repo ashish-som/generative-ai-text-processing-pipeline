@@ -1,0 +1,30 @@
+# config.yaml
+
+### Data Loader Configuration ###
+data_loader:
+  # The path to the input data file (CSV, XLSX, or PDF)
+  file_path: "data/input/sample.xlsx"
+  # Required columns for validation for tabular data (CSV, XLSX)
+  required_tabular_columns: "id,title,abstract"
+  # Required columns for validation for PDF data
+  required_pdf_columns: "map_id,text"
+
+
+### LLM Model Configuration ###
+llm_model:
+  # LLM provider (e.g., openai, gemini, anthropic)
+  provider: "openai"
+  # Model to use for the API call (e.g., gpt-4, text-davinci-003)
+  model_name: "o4-mini-2025-04-16"
+  # API key for the LLM provider. It's recommended to use environment variables for this.
+  api_key_name: "OPENAI_API_KEY"
+  temperature: 0.7
+
+### Output Configuration ###
+output:
+  # The directory where the processed results will be saved
+  output_dir: "data/output"
+  # Name of the output CSV file
+  output_csv_file: "results.csv"
+  # Name of the output text file for raw LLM responses
+  output_excel_file: "results.xlsx"
